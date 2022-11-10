@@ -1,0 +1,7 @@
+$desktop: "1232px";
+$tablet: "768px";
+$mobile: "320px";
+
+
+$tablet-to-max-point: calc(#{$tablet} - #{1px});
+

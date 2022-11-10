@@ -1,0 +1,31 @@
+@import "src/styles/breakpoints";
+
+.banner {
+  background-image: url("../../images/main-banner-mobile.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  min-height: 320px;
+  width: 100%;
+  
+  @media screen and (min-width: $tablet) {
+    background-image: url("../../images/main-banner-tablet.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 340px;
+    min-height: 340px;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    background-image: url("../../images/main-banner-desk.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  &__title {
+    display: none; //  Unfortunately, I couldn't find image without title in figma
+  }
+}

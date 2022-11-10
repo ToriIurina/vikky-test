@@ -1,0 +1,88 @@
+@import "src/styles/palette-variables";
+@import "src/styles/breakpoints";
+@import "src/styles/mixins";
+
+.call-back-banner {
+  background: radial-gradient(85.62% 123.5% at 16.99% 100%, rgba(0, 195, 255, 0.2) 0%, rgba(243, 249, 255, 0) 100%), radial-gradient(90.83% 141.65% at 88.14% 9.17%, rgba(91, 194, 0, 0.16) 0%, rgba(243, 249, 255, 0) 100%), #F3F9FF;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 112px 12px 20px 12px;
+  position: relative;
+  
+  @media screen and (min-width: $tablet) {
+    padding: 32px 200px 20px 32px;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    padding: 36px 382px 24px 104px;
+  }
+  
+  &__title {
+    color: $color-text-black;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 4px 0;
+    text-align: center;
+    
+    @media screen and (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 8px 0;
+      text-align: left;
+    }
+    
+    @media screen and (min-width: $desktop) {
+      font-size: 32px;
+      line-height: 40px;
+      margin: 0 0 4px 0;
+    }
+  }
+  
+  &__text {
+    color: $color-text-black;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 24px 0;
+    text-align: center;
+    
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 0 16px 0;
+      text-align: left;
+    }
+    
+    @media screen and (min-width: $desktop) {
+      margin: 0 0 24px 0;
+    }
+  }
+  
+  &__img {
+    bottom: unset;
+    display: block;
+    margin: 0;
+    position: absolute;
+    right: 50%;
+    top: -28px;
+    transform: translateX(50%);
+    width: 184px;
+    
+    @media screen and (min-width: $tablet) {
+      bottom: 0;
+      right: 0;
+      top: unset;
+      transform: translateX(0);
+      width: 280px;
+    }
+    
+    @media screen and (min-width: $desktop) {
+      bottom: 2px;
+      right: 8px;
+      top: unset;
+      transform: translateX(0);
+      width: 382px;
+    }
+  }
+}

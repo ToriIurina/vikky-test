@@ -1,0 +1,47 @@
+//Brand Palette
+
+$color-brand-blue: #0078BE;
+$color-brand-blue-light: #3D95FB;
+$color-brand-blue-pale: #D8EAFE;
+
+$color-brand-yellow: #FFCA00;
+$color-brand-yellow-dark: #F6A81C;
+$color-brand-yellow-pale: #FFF6D4;
+
+$color-brand-white: #FFFFFF;
+
+$color-text-black: #313140;
+$color-text-dark-grey: #A1A1A1;
+$color-text-light-grey: #E6E6E6;
+$color-text-grey: #CACBCE;
+
+$color-bg-accent: #F3F9FF;
+
+$color-brand-red: #FB4242;
+
+
+//Variables
+
+$color-bg-main: $color-bg-accent;
+$color-bg-mobile-header: $color-brand-blue-light;
+$color-bg-tel-menu: $color-brand-white;
+$color-bg-booking-block: $color-brand-white;
+$color-bg-input: $color-brand-white;
+
+$color-bg-btn-primary: $color-brand-yellow;
+$color-bg-btn-primary-disable: $color-brand-yellow-pale;
+
+$color-btn-login: $color-brand-yellow-dark;
+
+$color-link: $color-brand-blue-light;
+$color-link-hover: $color-brand-blue;
+
+$color-icon: $color-brand-blue-light;
+
+$color-input-label: $color-text-dark-grey;
+
+$color-border-field: $color-text-light-grey;
+$color-border-field-hover: $color-brand-blue;
+
+$color-workday: $color-text-dark-grey;
+$color-holiday: $color-brand-red;

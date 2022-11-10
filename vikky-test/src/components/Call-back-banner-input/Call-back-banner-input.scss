@@ -1,0 +1,122 @@
+@import "src/styles/palette-variables";
+@import "src/styles/breakpoints";
+@import "src/styles/mixins";
+
+.form-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form-field {
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin: 0 0 6px 0;
+  max-width: 100%;
+  width: 100%;
+  
+  @media screen and (min-width: $tablet) {
+    box-shadow: 0 2px 8px rgba(15, 85, 126, 0.04), 4px 4px 16px rgba(18, 102, 152, 0.08);
+    flex-flow: row nowrap;
+    max-height: 56px;
+    max-width: 504px;
+  }
+  
+  &__input {
+    flex: 1 1 auto;
+    width: 100%;
+    
+    @media screen and (min-width: $tablet) {
+      width: auto;
+    }
+    
+    & .MuiFilledInput-root {
+      background-color: $color-bg-input;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 2px 8px rgba(15, 85, 126, 0.04), 4px 4px 16px rgba(18, 102, 152, 0.08);
+      margin: 0 0 8px 0;
+      overflow: hidden;
+      
+      &:hover {
+        background-color: $color-bg-input;
+      }
+      
+      &.Mui-focused {
+        background-color: $color-bg-input;
+      }
+      
+      @media screen and (min-width: $tablet) {
+        border-radius: 8px 0 0 8px;
+        margin: 0;
+      }
+    }
+    
+    & .MuiFormLabel-root {
+      color: $color-input-label;
+      
+      &.Mui-focused {
+        color: $color-input-label;
+      }
+    }
+    
+    & .MuiInputBase-input {
+      color: $color-text-black;
+      font-size: 16px;
+      font-weight: 600;
+      height: auto;
+      line-height: 20px;
+      padding: 26px 30px 10px 20px;
+    }
+  }
+  
+  &__btn {
+    &.MuiButton-root {
+      @media screen and (min-width: $tablet) {
+        margin-left: -8px;
+        width: auto;
+      }
+    }
+  }
+}
+
+.privacy-note {
+  &.MuiFormControlLabel-root {
+    align-items: flex-start;
+  }
+  
+  & .MuiTypography-root {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  
+  &__text {
+    padding: 12px 0;
+  }
+  
+  &__text {
+    .privacy-note_sm & {
+      padding: 10px 0;
+    }
+  }
+  
+  @media screen and (min-width: $tablet) {
+    max-width: 504px;
+  }
+  
+  &_sm {
+    & .MuiTypography-root {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 12px;
+    }
+  }
+}
+
+.link {
+  @include reset-link-styles($color-link, $color-link-hover);
+}

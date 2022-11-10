@@ -1,0 +1,506 @@
+@import "src/styles/palette-variables";
+@import "src/styles/breakpoints";
+@import "src/styles/mixins";
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 auto;
+  margin: 40px auto;
+}
+
+.booking-block {
+  background: $color-bg-booking-block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(15, 85, 126, 0.04), 4px 4px 16px rgba(18, 102, 152, 0.08);
+  margin-bottom: 40px;
+  padding: 40px 16px 26px;
+  
+  @media screen and (min-width: $tablet) {
+    padding: 40px 32px 26px;
+  }
+  
+  &__title {
+    padding: 0 0 24px;
+    
+    @media screen and (min-width: $tablet) {
+      padding: 0 0 40px;
+    }
+  }
+  
+  @media screen and (min-width: $desktop) {
+    margin: 0 0 78px;
+  }
+  
+}
+
+.title {
+  color: $color-text-black;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+  
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+.subtitle {
+  color: $color-text-black;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+.accordion {
+  &.MuiAccordion-root.MuiPaper-root {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(15, 85, 126, 0.04), 4px 4px 16px rgba(18, 102, 152, 0.08);
+    
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    
+    &:before {
+      display: none;
+    }
+  }
+  
+  & .MuiAccordionSummary-content,
+  & .MuiAccordionSummary-content.Mui-expanded {
+    margin: 16px 0;
+  }
+  
+  & .MuiAccordionSummary-root.Mui-expanded {
+    min-height: 52px;
+  }
+  
+  &__expand-icon {
+    &.MuiSvgIcon-root {
+      color: $color-icon;
+      font-size: 28px;
+    }
+  }
+  
+  &__form {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: auto;
+    
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    & .MuiFormControl-fullWidth {
+      grid-column: 1/1;
+      
+      @media screen and (min-width: $tablet) {
+        grid-column: 1/4;
+      }
+    }
+    
+    &.MuiAccordionDetails-root {
+      padding: 0 16px 16px;
+    }
+  }
+  
+  &__title {
+    color: $color-text-black;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    margin: 0;
+    
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+
+.privacy-checkbox {
+  &.MuiCheckbox-root,
+  &.MuiCheckbox-root.Mui-checked {
+    color: $color-icon;
+  }
+  
+  &_lg {
+    & .MuiSvgIcon-root {
+      font-size: 22px;
+      
+      @media screen and (min-width: $tablet) {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.booking-form {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  
+  @media screen and (min-width: $desktop) {
+    flex-flow: row nowrap;
+  }
+  
+  &__item {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    
+    &_lg {
+      max-width: 100%;
+      order: 2;
+      width: 100%;
+      
+      @media screen and (min-width: $desktop) {
+        max-width: calc(65% - 20px);
+        order: 1;
+        width: calc(65% - 20px);
+      }
+    }
+    
+    &_sm {
+      max-width: 100%;
+      order: 1;
+      width: 100%;
+
+      @media screen and (min-width: $desktop) {
+        max-width: calc(35% - 20px);
+        order: 2;
+        width: calc(35% - 20px);
+      }
+    }
+  }
+}
+
+.personal-data {
+  margin: 0 0 40px 0;
+  width: 100%;
+  
+  &__text {
+    color: $color-text-black;
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 0 24px 0;
+  }
+  
+  &__subtitle {
+    padding-bottom: 12px;
+  }
+}
+
+.confirm-buy {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  
+  @media screen and (min-width: $tablet) {
+    flex-flow: row nowrap;
+  }
+  
+  &__booking {
+    flex: 0 1 min-content;
+  }
+  
+  &__sum {
+    color: $color-text-black;
+    flex: 1 0 auto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 15px 0;
+  }
+  
+  &__btn {
+    
+    &.MuiButton-root {
+      
+      @media screen and (min-width: $tablet) {
+        width: 362px;
+      }
+    }
+  }
+}
+
+.sum {
+  align-items: baseline;
+  color: $color-icon;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 4px 0 0;
+}
+
+.summary-info {
+  border-radius: 8px;
+  border: 1px solid $color-brand-blue-light;
+  box-shadow: 0 2px 8px rgba(15, 85, 126, 0.04), 4px 4px 16px rgba(18, 102, 152, 0.08);
+  margin: 0 0 24px 0;
+  padding: 16px;
+  width: 100%;
+
+  @media screen and (min-width: $desktop) {
+    margin: 0 0 40px 0;
+  }
+  
+  &__subtitle {
+    padding-bottom: 20px;
+  }
+  
+  &__link {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin: 0 0 32px 0;
+    
+    @media screen and (min-width: $tablet) {
+      margin: 0 0 24px 0;
+    }
+    
+    @media screen and (min-width: $desktop) {
+      margin: 0 0 16px 0;
+    }
+  }
+}
+
+
+.custom-input {
+  
+  & .MuiInputBase-input {
+    height: 20px;
+    padding: 8px 14px;
+  }
+  
+  & .MuiInputBase-root {
+    color: $color-text-black;
+  }
+  
+  & .MuiFormLabel-root {
+    font-size: 12px;
+    line-height: 20px;
+    
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  
+  & label {
+    color: $color-input-label;
+  }
+  
+  & .MuiOutlinedInput-root {
+    
+    & fieldset {
+      border-color: $color-border-field;
+    }
+    
+    &:hover fieldset {
+      border-color: $color-border-field-hover;
+    }
+  }
+}
+
+.contacts {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 40px;
+  width: 100%;
+  
+  &__inner {
+    width: 100%;
+  }
+  
+  &__input {
+    width: 100%;
+    
+    @media screen and (min-width: $tablet) {
+      width: 232px;
+    }
+    
+    &:not(:last-child) {
+      margin: 0 0 16px 0;
+      
+      @media screen and (min-width: $tablet) {
+        margin: 0 16px 0 0;
+      }
+    }
+  }
+}
+
+
+.chip {
+  align-items: center;
+  background: $color-bg-main;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin: 0 0 16px 0;
+  padding: 4px 8px;
+  
+  &__text {
+    color: $color-text-black;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-right: 8px;
+  }
+  
+  &__number {
+    align-items: center;
+    color: $color-icon;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+  }
+}
+
+.dog-icon {
+  margin-right: 2px;
+}
+
+.info-list {
+  display: flex;
+  flex-flow: column wrap;
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+  
+  @media screen and (min-width: $tablet) {
+    height: 60px;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    height: auto;
+  }
+}
+
+.item-text {
+  color: $color-text-black;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 0 8px;
+  
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.item-icon {
+  color: $color-icon;
+}
+
+.weekday {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  line-height: 16px;
+  text-transform: uppercase;
+  
+  &_workday {
+    color: $color-workday;
+  }
+  
+  &_holiday {
+    color: $color-holiday;
+  }
+}
+
+
+.resume {
+  border-top: 1px solid $color-brand-blue-pale;
+  padding: 8px 0 0;
+}
+
+.price {
+  align-items: center;
+  color: $color-text-dark-grey;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  justify-content: space-between;
+  line-height: 16px;
+  margin: 0 6px 4px 0;
+  
+  &__number {
+    align-items: flex-end;
+    color: $color-text-black;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+}
+
+.total-price {
+  align-items: center;
+  color: $color-text-dark-grey;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: space-between;
+  line-height: 20px;
+  
+  &__number {
+    color: $color-text-black;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.help-desk {
+  margin: 0 0 40px 0;
+  
+  &__title {
+    color: $color-text-black;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 8px 8px 0;
+  }
+  
+  &__link {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    
+    @media screen and (min-width: $desktop) {
+      display: block;
+    }
+  }
+}

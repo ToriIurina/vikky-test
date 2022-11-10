@@ -1,0 +1,10 @@
+@mixin reset-link-styles($color-link, $color-hover) {
+  color: $color-link;
+  outline: none;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    color: $color-hover;
+  }
+}
+

@@ -1,0 +1,8 @@
+@import "src/styles/palette-variables";
+
+.footer {
+  border: 1px dashed $color-brand-yellow;
+  flex: 0 0 auto;
+  height: 232px;
+  text-align: center;
+}

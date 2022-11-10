@@ -1,0 +1,30 @@
+@import "src/styles/palette-variables";
+@import "src/styles/breakpoints";
+
+.header-mobile {
+  &.MuiPaper-root {
+    background-color: $color-bg-mobile-header;
+    box-shadow: none;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.toolbar {
+  
+  &.MuiToolbar-root {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 32px;
+    justify-content: space-between;
+    min-height: 32px;
+    padding: 0;
+  }
+}
